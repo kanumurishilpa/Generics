@@ -1,4 +1,4 @@
-package kanumuri.shilpa.gererics.test;
+package kanumuri.shilpa.gererics;
 
 import kanumuri.shilpa.generics.MyArrayList;
 import org.junit.Assert;
@@ -30,6 +30,19 @@ public class MyArrayListTest {
         list.add(777);
         int expected = 8;
         int actual = list.size();
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void addTest(){
+        list.add(1);
+        list.add(111);
+        list.add(222);
+        list.add(333);
+        list.add(444);
+        list.add(5, 1000);
+        int expected = 1000;
+        int actual = list.get(5);
         Assert.assertEquals(expected,actual);
     }
 
@@ -79,7 +92,7 @@ public class MyArrayListTest {
         Assert.assertEquals(expected,actual);
     }
 
-    @Test
+  /*  @Test
     public void clearTest(){
         list.add(1);
         list.add(111);
@@ -90,11 +103,17 @@ public class MyArrayListTest {
         int expected = 0;
         int actual = list.size();
         Assert.assertEquals(expected,actual);
-    }
+    }*/
 
     @Test
     public void isEmptyTest(){
         Assert.assertTrue(list.isEmpty());
+    }
+
+    @Test
+    public void isEmptyFalseTest(){
+        list.add(23);
+        Assert.assertFalse(list.isEmpty());
     }
 
     @Test
@@ -104,9 +123,17 @@ public class MyArrayListTest {
         list.add(222);
         list.add(333);
         list.add(444);
-        int expected = 0;
-        int actual = list.contains(222);
-        Assert.assertEquals(expected,actual);
+        Assert.assertTrue(list.contains(444));
+    }
+
+    @Test
+    public void containsFalseTest(){
+        list.add(1);
+        list.add(111);
+        list.add(222);
+        list.add(333);
+        list.add(444);
+        Assert.assertFalse(list.contains(90));
     }
 
 

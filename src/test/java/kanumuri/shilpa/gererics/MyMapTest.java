@@ -1,4 +1,4 @@
-package kanumuri.shilpa.gererics.test;
+package kanumuri.shilpa.gererics;
 
 /**
  * Created by zipcoder on 2/22/17.

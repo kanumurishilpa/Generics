@@ -67,10 +67,10 @@ public class MyArrayList<E>{
         return removedElement;
     }
 
-    /*public void clear(){
-        for(int i = 0; i < size - 1; i++){
-            E element = elements[i];
-            remove(element);
+/*    public void clear(){
+
+        for(int i = 0; i < size; i++ ){
+            remove(elements[]);
         }
     }*/
 
@@ -78,9 +78,14 @@ public class MyArrayList<E>{
         return size == 0;
     }
 
-    public E contains(E element){
-
-        return element;
+    public boolean contains(E element){
+        boolean exists = false;
+        for(int i =0; i < size ; i++){
+            if(element.equals(elements[i])){
+                exists = true;
+            }
+        }
+        return exists;
     }
 
     private void ensureCapacity() {

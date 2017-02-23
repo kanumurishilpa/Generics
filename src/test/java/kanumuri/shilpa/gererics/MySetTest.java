@@ -1,4 +1,4 @@
-package kanumuri.shilpa.gererics.test;
+package kanumuri.shilpa.gererics;
 
 import kanumuri.shilpa.generics.MyArrayList;
 import org.junit.Assert;
